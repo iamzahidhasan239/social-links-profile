@@ -1,0 +1,103 @@
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --greenColor: hsl(75, 94%, 57%);
+    --whiteColor: hsl(0, 0%, 100%);
+    --greyColor: hsl(0, 0%, 20%);
+    --darkgreyColor: hsl(0, 0%, 12%);
+    --offblackColor: hsl(0, 0%, 8%);
+    --pText: 14px;
+}
+html, body{
+    height: 100%;
+}
+img{
+    width: 100%;
+    height: auto;
+}
+ul{
+    list-style: none;
+}
+a, a:hover{
+    text-decoration: none;
+}
+body{
+    font-family: "Inter", sans-serif;
+    background-color: var(--offblackColor);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card{
+    background-color: var(--darkgreyColor);
+    padding: 35px;
+    border-radius: 20px;
+    text-align: center;
+}
+.card img{
+    width: 85px;
+    height: 85px;
+    border-radius: 100%;
+}
+.card .card-body{
+    padding-top: 25px;
+}
+.card .card-body h3{
+    color: var(--whiteColor);
+    font-weight: 700;
+    font-size: 24px;
+}
+.card .card-body h6{
+    color: var(--greenColor);
+    font-weight: 600;
+    font-size: 14px;
+    margin: 10px 0px 25px;
+}
+.card .card-body p{
+    color: var(--whiteColor);
+    margin-bottom: 20px;
+    font-size: var(--pText);
+    margin-bottom: 25px;
+}
+.card .card-body ul li a{
+    display: inline-block;
+    font-size: var(--pText);
+    color: var(--whiteColor);
+    font-weight: 600;
+    width: 325px;
+    padding: 17px 50px;
+    background-color: var(--greyColor);
+    margin-bottom: 15px;
+    border-radius: 15px;
+    border: 1px solid var(--greyColor);
+    cursor: pointer;
+    transition: 1s;
+}
+.card .card-body ul li:last-child a{
+    margin-bottom: 0px;
+}
+.card .card-body ul li a:hover{
+    color: var(--darkgreyColor);
+    background-color: var(--greenColor);
+    border: 1px solid var(--greenColor);
+}
+.card .card-body ul li a:focus{
+    color: var(--darkgreyColor);
+    background-color: var(--greenColor);
+    border: 1px solid var(--greenColor);
+}
+/* responsive design */
+@media all and (max-width: 430px){
+    .card{
+        width: 90%;
+    }
+    .card .card-body p{
+        font-size: 13px;
+    }
+    .card .card-body ul li a{
+        width: 100%;
+    } 
+}
